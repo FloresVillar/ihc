@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="650" fill="#1B211E"/>
+
+  <text x="32" y="48" font-size="20" font-weight="600" fill="#ECEFEC">3. Gesto de opt-out — Pedestal</text>
+
+  <line x1="450" y1="80" x2="450" y2="560" stroke="#3A433D" stroke-width="1"/>
+
+  <!-- PANEL IZQUIERDO: antes, capullo abierto -->
+  <g>
+    <text x="225" y="100" font-size="14" font-weight="600" fill="#ECEFEC" text-anchor="middle">Antes: capullo activo</text>
+
+    <!-- pedestal -->
+    <polygon points="185,520 265,520 245,340 205,340" fill="#2E362F" stroke="#3A433D" stroke-width="1.5"/>
+
+    <!-- capullo abierto: pétalos extendidos -->
+    <circle cx="225" cy="320" r="60" fill="#73D99A" opacity="0.18"/>
+    <rect x="219" y="288" width="12" height="64" rx="6" fill="#73D99A" opacity="0.55"/>
+    <rect x="193" y="314" width="64" height="12" rx="6" fill="#73D99A" opacity="0.55"/>
+    <circle cx="225" cy="320" r="16" fill="#73D99A"/>
+
+    <text x="225" y="560" font-size="12" fill="#A9B0AC" text-anchor="middle">Capullo abierto — sensor censando</text>
+  </g>
+
+  <!-- PANEL DERECHO: después, mano cubre el capullo -->
+  <g>
+    <text x="675" y="100" font-size="14" font-weight="600" fill="#ECEFEC" text-anchor="middle">Después: opt-out inmediato</text>
+
+    <!-- pedestal -->
+    <polygon points="635,520 715,520 695,340 655,340" fill="#2E362F" stroke="#3A433D" stroke-width="1.5"/>
+
+    <!-- capullo cerrado: pétalos plegados hacia adentro (bulbo cerrado) -->
+    <ellipse cx="675" cy="320" rx="11" ry="24" fill="#4A5650"/>
+    <path d="M675 296 Q671 320 675 344" stroke="#5B6860" stroke-width="1.5" fill="none" opacity="0.8"/>
+    <path d="M675 296 Q679 320 675 344" stroke="#5B6860" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+    <!-- mano cubriendo (icono simple de trazo) -->
+    <g fill="none" stroke="#C7CCC8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="675" cy="322" rx="34" ry="26" fill="#242C28" fill-opacity="0.9"/>
+      <path d="M654 306 L654 288"/>
+      <path d="M665 300 L665 280"/>
+      <path d="M685 300 L685 280"/>
+      <path d="M696 306 L696 288"/>
+    </g>
+
+    <text x="675" y="560" font-size="12" fill="#A9B0AC" text-anchor="middle">Capullo cierra sus pétalos — apaga el sensado</text>
+  </g>
+
+  <!-- flecha entre estados -->
+  <g stroke="#A9B0AC" stroke-width="2" fill="none">
+    <line x1="330" y1="320" x2="400" y2="320"/>
+    <polygon points="400,313 415,320 400,327" fill="#A9B0AC"/>
+  </g>
+
+  <text x="450" y="610" font-size="13" fill="#A9B0AC" text-anchor="middle">Gesto físico y visible en el pedestal — no un menú oculto: agencia real e inmediata</text>
+</svg>

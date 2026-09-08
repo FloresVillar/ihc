@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="650" fill="#1B211E"/>
+  <rect x="0" y="350" width="900" height="300" fill="#242C28"/>
+
+  <text x="32" y="48" font-size="20" font-weight="600" fill="#ECEFEC">1b. Vista general — Polinización</text>
+
+  <!-- obra-planta 1 (bioluminiscencia calma, sin visitantes cerca) -->
+  <g>
+    <circle cx="180" cy="480" r="117" fill="#73D99A" opacity="0.16"/>
+    <rect x="164.25" y="385.5" width="31.5" height="189" rx="9" fill="#73D99A" opacity="0.55"/>
+    <rect x="85.5" y="464.25" width="189" height="31.5" rx="9" fill="#73D99A" opacity="0.55"/>
+    <circle cx="180" cy="480" r="63" fill="#73D99A"/>
+  </g>
+
+  <!-- obra-planta 2 (recibe a los 2 visitantes: polinización) -->
+  <g>
+    <circle cx="430" cy="430" r="156" fill="#73D99A" opacity="0.16"/>
+    <rect x="409" y="304" width="42" height="252" rx="12" fill="#73D99A" opacity="0.55"/>
+    <rect x="304" y="409" width="252" height="42" rx="12" fill="#73D99A" opacity="0.55"/>
+    <circle cx="430" cy="430" r="84" fill="#73D99A"/>
+  </g>
+
+  <!-- obra-planta 3 (estado tenue / marchitamiento parcial, sin visitantes cerca) -->
+  <g>
+    <circle cx="700" cy="500" r="99" fill="#8A9690" opacity="0.14"/>
+    <rect x="686.75" y="420.5" width="26.5" height="159" rx="8" fill="#5B6860" opacity="0.55"/>
+    <rect x="620.5" y="486.75" width="159" height="26.5" rx="8" fill="#5B6860" opacity="0.55"/>
+    <circle cx="700" cy="500" r="53" fill="#5B6860"/>
+  </g>
+
+  <!-- rayos de señal: 2 visitantes distintos convergiendo en la misma obra (obra 2) -->
+  <g stroke-width="1.5" stroke-dasharray="4 4" fill="none">
+    <line x1="350" y1="505" x2="364.4" y2="491.6" stroke="#D9A05B" opacity="0.8"/>
+    <line x1="510" y1="505" x2="495.6" y2="491.6" stroke="#8FB3D9" opacity="0.8"/>
+  </g>
+
+  <!-- visitantes (ambos cerca de la obra 2) -->
+  <g fill="#9AA39D">
+    <circle cx="350" cy="505" r="9"/>
+    <rect x="337" y="512" width="26" height="40" rx="10"/>
+  </g>
+  <g fill="#9AA39D">
+    <circle cx="510" cy="505" r="9"/>
+    <rect x="497" y="512" width="26" height="40" rx="10"/>
+  </g>
+
+  <text x="350" y="572" font-size="12" fill="#A9B0AC" text-anchor="middle">Visitante A</text>
+  <text x="510" y="572" font-size="12" fill="#A9B0AC" text-anchor="middle">Visitante B</text>
+
+  <!-- leyenda -->
+  <text x="32" y="600" font-size="13" fill="#A9B0AC">Polinización: ambos visitantes alimentan la misma obra — su estado final</text>
+  <text x="32" y="622" font-size="13" fill="#A9B0AC">es la mezcla agregada y anónima de las dos señales, no la de un individuo.</text>
+</svg>
