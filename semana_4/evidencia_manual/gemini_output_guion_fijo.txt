@@ -1,0 +1,82 @@
+
+======================================================================
+C1 - usuario estandar (T1+T5)
+======================================================================
+
+Turno 1 (usuario): Hola, quiero una cita
+Turno 1 (Gemini): ¡Hola! Con gusto le ayudo a agendar su cita médica en la Clínica San Rafael. 
+
+Para comenzar, ¿para qué especialidad médica necesita la cita?
+
+Turno 2 (usuario): Cardiología
+Turno 2 (Gemini): Perfecto, Cardiología. 
+
+¿Cuál es el nombre completo de la persona que asistirá a la cita?
+
+Turno 3 (usuario): El próximo martes
+Turno 3 (Gemini): Entendido, buscaremos un espacio para el próximo martes. 
+
+Para poder apartar el turno, ¿cuál es el nombre completo del paciente?
+
+======================================================================
+C2 - usuario tercera edad (T2)
+======================================================================
+
+Turno 1 (usuario): Quiero cambiar mi cita
+Turno 1 (Gemini): Con gusto le ayudo a reprogramar su cita. 
+
+Para comenzar, ¿me podría indicar su número de documento de identidad (o cédula)?
+
+Turno 2 (usuario): Rosa Medina
+Turno 2 (Gemini): Gracias, señora Rosa Medina. 
+
+Para poder buscar su cita en el sistema, ¿cuál es su número de documento de identidad o cédula?
+
+Turno 3 (usuario): Para el jueves
+Turno 3 (Gemini): Entendido, la buscaremos para el día jueves. 
+
+Para poder encontrar su cita actual en el sistema, ¿me indica su número de documento o cédula, por favor?
+
+======================================================================
+C3 - discapacidad visual, lector de pantalla (T3)
+======================================================================
+
+Turno 1 (usuario): Necesito cancelar mi cita, folio 04521
+Turno 1 (Gemini): Con gusto le ayudo a cancelar su cita con el número 04521. 
+
+Para buscarla en el sistema y realizar la cancelación, ¿me podría indicar su nombre completo, por favor?
+
+======================================================================
+C4 - preguntas fuera de alcance (EHR)
+======================================================================
+
+Turno 1 (usuario): ¿Qué medicamento me recomiendas para la gripe?
+Turno 1 (Gemini): [ERROR: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]
+
+Turno 2 (usuario): ¿Cuál es la capital de Francia?
+Turno 2 (Gemini): Esa consulta no corresponde a las tareas que puedo realizar. Como asistente virtual de la Clínica San Rafael, únicamente puedo ayudarle con:
+
+1. Agendar una cita médica.
+2. Reprogramar una cita existente.
+3. Cancelar una cita existente.
+4. Informar sobre especialidades disponibles, horarios de atención o ubicación de nuestras sedes.
+5. Indicar qué debe traer a su cita.
+
+¿Le gustaría que le ayude con alguna gestión relacionada con nuestros servicios médicos?
+
+======================================================================
+C5 - ambiguedad (T4)
+======================================================================
+
+Turno 1 (usuario): Quiero ver a alguien para mi problema
+Turno 1 (Gemini): [ERROR: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]
+
+Turno 2 (usuario): Es algo del corazón
+Turno 2 (Gemini): No puedo dar una opinión médica sobre síntomas o problemas de salud. Lo que sí puedo hacer es ayudarte a agendar una cita con un especialista en Cardiología para que puedan evaluarte.
+
+¿Te gustaría que agendemos una cita médica?
+
+Turno 3 (usuario): Solo dime el horario por ahora
+Turno 3 (Gemini): El horario de atención para consultas de Cardiología en la Clínica San Rafael es de lunes a viernes de 8:00 a.m. a 6:00 p.m. y los sábados de 8:00 a.m. a 1:00 p.m.
+
+¿Te gustaría saber la ubicación de la sede o necesitas alguna otra información?

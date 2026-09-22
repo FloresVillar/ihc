@@ -1,0 +1,48 @@
+provider,scenario_id,category,task_id,turn,role,text,crr_flag,ts
+deepseek,C1,task,T1,1,user,"Hola, quiero una cita",,2026-09-21T20:01:25
+deepseek,C1,task,T1,1,assistant,"¡Claro! Con gusto te ayudo a agendar una cita.
+
+¿Con qué especialidad la necesitas?",0,2026-09-21T20:01:27
+deepseek,C1,task,T1,2,user,Cardiología,,2026-09-21T20:01:27
+deepseek,C1,task,T1,2,assistant,"Perfecto, cardiología.
+
+¿Prefieres la cita en la mañana o en la tarde?",0,2026-09-21T20:01:29
+deepseek,C1,task,T1,3,user,El próximo martes,,2026-09-21T20:01:29
+deepseek,C1,task,T1,3,assistant,"Entiendo, el próximo martes.
+
+¿Prefieres esa cita en la mañana o en la tarde?",0,2026-09-21T20:01:31
+deepseek,C2,task,T2,1,user,Quiero cambiar mi cita,,2026-09-21T20:01:31
+deepseek,C2,task,T2,1,assistant,"Entiendo, quieres reprogramar tu cita. Para ayudarte, ¿me puedes dar tu nombre completo?",0,2026-09-21T20:01:34
+deepseek,C2,task,T2,2,user,Rosa Medina,,2026-09-21T20:01:34
+deepseek,C2,task,T2,2,assistant,"Gracias, Rosa. ¿Para qué fecha y hora te gustaría cambiar tu cita?",0,2026-09-21T20:01:36
+deepseek,C2,task,T2,3,user,Para el jueves,,2026-09-21T20:01:36
+deepseek,C2,task,T2,3,assistant,"Perfecto, Rosa. ¿A qué hora te gustaría el jueves?",0,2026-09-21T20:01:38
+deepseek,C2,task,T2,4,user,A las 9:00 de la mañana,,2026-09-21T20:01:38
+deepseek,C2,task,T2,4,assistant,"Gracias. Ahora, ¿me puedes decir cuál era la fecha y hora de tu cita actual?",0,2026-09-21T20:01:41
+deepseek,C2,task,T2,5,user,A las 9:00 de la mañana,,2026-09-21T20:01:41
+deepseek,C2,task,T2,5,assistant,"Entiendo, pero necesito saber la fecha de tu cita actual. ¿Qué día era esa cita que quieres cambiar?",1,2026-09-21T20:01:43
+deepseek,C3,task,T3,1,user,"Necesito cancelar mi cita, folio 04521",,2026-09-21T20:01:43
+deepseek,C3,task,T3,1,assistant,"Claro, puedo ayudarte a cancelar tu cita. Solo necesito confirmar un dato: ¿me puedes decir tu nombre completo, por favor?",0,2026-09-21T20:01:46
+deepseek,C3,task,T3,2,user,Elmer Izarra,,2026-09-21T20:01:46
+deepseek,C3,task,T3,2,assistant,"Gracias, Elmer. Voy a confirmar la cancelación de tu cita:
+
+- Paciente: Elmer Izarra
+- Número de cita: 04521
+
+¿Confirmas que deseas cancelar esta cita?",0,2026-09-21T20:01:48
+deepseek,C4,out_of_scope,,1,user,¿Qué medicamento me recomiendas para la gripe?,,2026-09-21T20:01:48
+deepseek,C4,out_of_scope,,1,assistant,No puedo recomendarte medicamentos ni darte una opinión médica. Lo que sí puedo hacer es agendar una cita para que un especialista te revise. ¿Quieres que te agende una cita?,0,2026-09-21T20:01:50
+deepseek,C4,out_of_scope,,2,user,¿Cuál es la capital de Francia?,,2026-09-21T20:01:50
+deepseek,C4,out_of_scope,,2,assistant,"Eso no corresponde a ninguna de las tareas que puedo realizar en la Clínica San Rafael. Solo puedo ayudarte con: agendar, reprogramar o cancelar una cita; informarte sobre especialidades, horarios o ubicación de sedes; o decirte qué traer a tu cita. ¿Te puedo ayudar con alguna de estas opciones?",0,2026-09-21T20:01:53
+deepseek,C5,task,T4,1,user,Quiero ver a alguien para mi problema,,2026-09-21T20:01:53
+deepseek,C5,task,T4,1,assistant,"Claro, puedo ayudarte a agendar una cita médica.
+
+Para empezar, ¿qué especialidad necesitas?",0,2026-09-21T20:01:55
+deepseek,C5,task,T4,2,user,Es algo del corazón,,2026-09-21T20:01:55
+deepseek,C5,task,T4,2,assistant,"Entiendo. Para el corazón, la especialidad es Cardiología.
+
+¿Te gustaría agendar una cita de Cardiología?",0,2026-09-21T20:01:58
+deepseek,C5,task,T4,3,user,Solo dime el horario por ahora,,2026-09-21T20:01:58
+deepseek,C5,task,T4,3,assistant,"Claro. El horario de atención de Cardiología es de lunes a viernes, de 8:00 a 17:00 horas.
+
+¿Necesitas algo más?",0,2026-09-21T20:02:00

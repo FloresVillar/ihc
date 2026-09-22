@@ -1,0 +1,60 @@
+
+======================================================================
+C1 - usuario estandar (T1+T5) [reintento final]
+======================================================================
+
+Turno 1 (usuario): Hola, quiero una cita
+Turno 1 (DeepSeek): ¡Hola! Con gusto te ayudo a agendar una cita. Para empezar, ¿qué especialidad necesitas?
+
+Turno 2 (usuario): Cardiología
+Turno 2 (DeepSeek): Perfecto, Cardiología. ¿Qué día y a qué hora te gustaría la cita?
+
+Turno 3 (usuario): El próximo martes
+Turno 3 (DeepSeek): Gracias. ¿A qué hora te gustaría la cita ese martes?
+
+Turno 4 (usuario): A las 10:00 de la mañana
+Turno 4 (DeepSeek): Muy bien. Para confirmar la cita, ¿me puedes dar tu nombre completo, por favor?
+
+[TOTAL TURNOS: 4]
+
+======================================================================
+C2 - usuario tercera edad (T2) [reintento final]
+======================================================================
+
+Turno 1 (usuario): Quiero cambiar mi cita
+Turno 1 (DeepSeek): Claro, te ayudo a reprogramar tu cita. 
+
+¿Cuál es tu nombre completo?
+
+Turno 2 (usuario): Rosa Medina
+Turno 2 (DeepSeek): Gracias, Rosa.
+
+¿Para qué fecha y hora tienes tu cita actual?
+
+Turno 3 (usuario): Para el jueves
+Turno 3 (DeepSeek): Entiendo. ¿Me puedes decir la fecha exacta de ese jueves? Por ejemplo, día y mes.
+
+Turno 4 (usuario): 9 de octubre
+Turno 4 (DeepSeek): Gracias. ¿A qué hora es tu cita actual del jueves 9 de octubre?
+
+Turno 5 (usuario): A las 9:00 de la mañana
+Turno 5 (DeepSeek): Gracias, Rosa.
+
+Ahora dime, ¿para qué nueva fecha te gustaría cambiar tu cita?
+
+Turno 6 (usuario): A las 9:00 de la mañana
+Turno 6 (DeepSeek): Entendido, quieres mantener la hora a las 9:00 de la mañana.
+
+¿Para qué nueva fecha te gustaría cambiar tu cita?
+
+Turno 7 (usuario): A las 9:00 de la mañana
+Turno 7 (DeepSeek): Rosa, la hora ya la tengo: 9:00 de la mañana.
+
+Solo me falta un dato: ¿para qué nueva fecha quieres tu cita? Por ejemplo, día y mes.
+
+Turno 8 (usuario): 9 de octubre
+Turno 8 (DeepSeek): Esa es la fecha de tu cita actual, jueves 9 de octubre.
+
+Para reprogramarla necesito una fecha distinta. ¿Para qué nuevo día quieres tu cita?
+
+[TOTAL TURNOS: 8]

@@ -1,0 +1,111 @@
+
+======================================================================
+a) Contexto (5 turnos)
+======================================================================
+
+Turno 1 (usuario): Hola, quiero una cita
+Turno 1 (DeepSeek): ¡Hola! Con gusto te ayudo a agendar tu cita en la Clínica San Rafael. 😊
+
+Para poder encontrarte el espacio adecuado, necesito algunos datos:
+
+1. **Especialidad** que necesitas (por ejemplo: medicina general, pediatría, dermatología, etc.)
+2. **Sede** de preferencia (si conoces las que tenemos disponibles).
+3. **Fecha y horario** aproximado en que te gustaría ser atendido/a.
+
+Si no estás seguro/a de la especialidad, cuéntame brevemente el motivo de tu consulta y te oriento sobre cuál podría corresponder (sin dar diagnóstico, solo para direccionar tu cita).
+
+¿Empezamos por la especialidad?
+
+Turno 2 (usuario): Para cardiología
+Turno 2 (DeepSeek): Perfecto, **cardiología**. 👍
+
+Ahora necesito confirmar dos datos más:
+
+1. **Sede** de preferencia. Si no la conoces, puedo indicarte las sedes donde tenemos disponible esta especialidad.
+2. **Fecha y horario** aproximado en que te gustaría la cita (por ejemplo: "esta semana en la mañana", "el viernes por la tarde", una fecha específica, etc.).
+
+¿Cuál prefieres?
+
+Turno 3 (usuario): ¿Cuánto cuesta la consulta?
+Turno 3 (DeepSeek): Buena pregunta. 😊 El valor de la consulta de cardiología puede variar según:
+
+- Tu **tipo de vinculación** (particular, EPS, prepagada o convenio con tu empresa).
+- La **sede** donde te atiendas.
+
+Por eso, para darte un valor exacto necesito saber **cómo vas a cubrir la consulta**. ¿Es particular, por EPS o por prepagada/convenio?
+
+Si me confirmas eso, te indico el valor o el procedimiento correspondiente. Y apenas lo tengamos claro, seguimos con la **fecha, horario y sede** para agendar tu cita.
+
+Turno 4 (usuario): Ya, y ¿tienen sede en San Isidro?
+Turno 4 (DeepSeek): Sí, contamos con sede en **San Isidro**. 🏥
+
+Para confirmarte la disponibilidad de cardiología en esa sede y darte el valor exacto de la consulta, aún me falta un dato clave:
+
+**¿Cómo vas a cubrir la consulta?** (particular, EPS, prepagada o convenio)
+
+Con eso te indico:
+- Si hay agenda disponible para cardiología en San Isidro.
+- El valor según tu cobertura.
+
+Y luego pasamos a elegir **fecha y horario**. ¿Me confirmas el tipo de cobertura?
+
+Turno 5 (usuario): Ok, entonces la cita de cardiología, ¿qué días hay?
+Turno 5 (DeepSeek): Con gusto te ayudo con eso. 😊
+
+La disponibilidad de cardiología en la sede **San Isidro** puede variar según la semana y el tipo de agenda (particular, EPS, prepagada/convenio), por eso todavía necesito confirmar un dato antes de darte los días y horarios exactos:
+
+**¿Cómo vas a cubrir la consulta?** (particular, EPS, prepagada o convenio)
+
+Una vez me lo indiques, te comparto:
+
+- Los **días y horarios disponibles** para cardiología en San Isidro.
+- El **valor** de la consulta según tu cobertura.
+
+Y de una vez vamos eligiendo la **fecha** que mejor te sirva. ¿Me confirmas tu tipo de cobertura?
+
+======================================================================
+b) Ambigüedad
+======================================================================
+
+Turno 1 (usuario): Necesito una cita con el especialista de siempre
+Turno 1 (DeepSeek): Entiendo. Para agendar tu cita necesito algunos datos, ya que no tengo acceso a tu historial previo en esta conversación.
+
+¿Me puedes indicar, por favor?
+
+1. **Especialidad** que necesitas (por ejemplo: medicina general, cardiología, dermatología, etc.)
+2. **Sede** de la Clínica San Rafael donde deseas la atención
+3. **Fecha y hora** de preferencia (o si te sirve cualquier horario disponible)
+
+Con esos datos verifico la disponibilidad y te confirmo la cita.
+
+======================================================================
+c) Petición de aclaración
+======================================================================
+
+Turno 1 (usuario): Quiero cambiar mi cita
+Turno 1 (DeepSeek): ¡Claro que sí! Con gusto te ayudo a reprogramar tu cita. Para poder hacerlo, necesito algunos datos:
+
+1. **Número de documento de identidad** del paciente.
+2. **Especialidad** de la cita actual.
+3. **Fecha y hora** de la cita que deseas cambiar.
+
+Además, cuéntame: ¿para qué **nueva fecha y hora** te gustaría reprogramarla? Así verifico la disponibilidad en la agenda.
+
+======================================================================
+Caso de error deliberado
+======================================================================
+
+Turno 1 (usuario): Cita para el 31 de febrero
+Turno 1 (DeepSeek): Con gusto te ayudo con tu cita. Solo un detalle: el **31 de febrero no existe** en el calendario, así que no puedo agendarla en esa fecha. 😊
+
+¿Quieres que la agendemos para otra fecha? Por ejemplo:
+- **28 de febrero** (o 29 si es año bisiesto)
+- Cualquier día de **marzo**
+
+Para avanzar necesito estos datos:
+1. **Especialidad** que necesitas
+2. **Sede** de preferencia
+3. **Fecha y hora** aproximada que te sirva
+4. Tu **nombre y documento** de identidad
+
+¿Cómo prefieres continuar?
