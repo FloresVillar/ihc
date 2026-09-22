@@ -1,0 +1,69 @@
+﻿CC451 – Interacción Humano Computadora
+Asignación CC451-Lec-lab02 — Conceptualización en Diseño de Interacciones con IA
+Integrante:
+Esaú Flores
+Curso:
+Interacción Humano Computadora (CC451)
+Problema elegido:
+Problema 9 — Curaduría de Arte Bio-Responsiva en Museos
+Contexto del Problema
+Un museo donde las obras de arte (proyectadas y generadas por IA) cambian en tiempo real según el estado emocional y fisiológico (ritmo cardíaco, movimiento, dilatación pupilar) de los visitantes.
+Retos de conceptualización originales:
+    • ¿Qué metáfora representa mejor el espacio expositivo? (¿un espejo?, ¿un jardín vivo?, ¿un sueño compartido?) 
+    • ¿Cómo se visualiza la privacidad de los datos biométricos en un espacio público sin arruinar la estética de la obra? 
+    • ¿Qué tipos de interacción permiten al usuario "tomar el control" de su experiencia emocional si se siente abrumado? 
+Pistas teóricas: Diseño afectivo (Affective Computing), teoría de la inmersión espacial y privacidad contextual.
+Fase 2: Análisis del Problema
+Pregunta
+Respuesta
+¿Quiénes son los usuarios principales y secundarios?
+Principales: visitantes del museo (público general, familias, estudiantes de arte, turistas).
+Secundarios: curadores/artistas que diseñan el comportamiento bio-reactivo de las obras, personal de sala y mantenimiento, investigadores en HCI/arte generativo que evalúan la instalación.
+¿Cuál es el contexto físico/social de uso?
+Sala de exposición semi-oscura con proyecciones ambientales, tránsito libre de visitantes (a veces solos, a veces en grupo o familia), ambiente contemplativo, iluminación tenue que resalta las obras.
+¿Qué necesidades emocionales además de funcionales existen?
+Deseo de asombro y conexión emocional genúina con el arte; necesidad de sentirse seguro y no vigilado; deseo de control sobre cuánto se expone su estado interno; posible ansiedad si el sistema se percibe como invasivo.
+¿Qué hace que este problema sea "no tradicional"?
+El arte deja de ser un objeto estático y pasa a ser un organismo que responde en tiempo real; el espectador se vuelve co-creador involuntario mediante señales fisiológicas; aparece un dilema ético (datos biométricos en espacio público) ausente en la curaduría tradicional.
+Fase 3: Formulación del Modelo Conceptual
+Metáfora principal elegida: "El Jardín Vivo". Cada obra se comporta como una planta que florece, respira o se marchita según el estado emocional/fisiológico agregado de quienes están cerca. Se descartó la metáfora del "espejo" por connotar vigilancia directa, y la de "sueño compartido" por ser demasiado abstracta para guiar decisiones de diseño de interacción.
+Elemento
+Descripción
+Justificación Teórica
+Metáfora Principal
+El Jardín Vivo: la sala es un jardín donde cada obra-planta reacciona al estado fisiológico de los visitantes cercanos (bioluminiscencia, ritmo de "respiración" visual, textura).
+Affective Computing (Picard): el sistema detecta y responde al afecto sin exigir input explícito. La metáfora orgánica evita el encuadre de "vigilancia" propio de un espejo o cámara.
+Objetos Conceptuales
+Semilla (dato de entrada del estado fisiológico/emocional de un visitante), Obra-planta / "Macizo" (la obra misma; objeto central con el que el visitante interactúa y que agrega las semillas cercanas), Capullo-sensor (objeto físico del pedestal que el visitante toca para activar el opt-out).
+Teoría de la inmersión espacial: el espacio responde como un ecosistema, no como una consola de control; refuerza la presencia sin mediación explícita de interfaz. A diferencia de un estado o proceso, cada objeto conceptual tiene identidad propia y persiste en el tiempo — es lo que el visitante puede señalar, tocar o rastrear.
+Estados y Ciclo de Vida (de la Obra-planta)
+Floración (estado visual cuando hay señal fisiológica activa cerca), Polinización (proceso de agregación de semillas de varios visitantes en una misma obra), Marchitamiento (decaimiento temporal del estado cuando el dato deja de recibirse).
+No son objetos sino transiciones/estados de la "Obra-planta" a lo largo del tiempo — equivalentes al ciclo vital de una planta real, lo que refuerza la metáfora del Jardín Vivo sin sobrecargar el modelo con entidades ficticias.
+Atributos Clave
+Color/bioluminiscencia (valencia emocional), ritmo de pulso visual (arousal, ligado al ritmo cardíaco), textura/densidad (tensión), "fragilidad" visible (ambigüedad cuando la señal es débil o incierta).
+Mapeo intuitivo (principio de Norman): el color y el ritmo son códigos afectivos ya familiares culturalmente (rojo = intensidad, lento = calma).
+Relaciones entre Objetos
+Varias "semillas" (visitantes) alimentan un mismo "macizo" (obra); el estado mostrado es siempre agregado y anónimo — nunca se puede rastrear a un individuo. Cada dato "florece y se marchita" en minutos (no persiste).
+Contextual Integrity (Nissenbaum) / privacidad contextual: el flujo de datos biométricos queda confinado al contexto sala-obra-momento, igual que en un jardín real nada queda "grabado".
+Tipos de Interacción
+Exploracional (dominante): moverse libremente entre obras activa su respuesta por proximidad.
+Manipulación directa (control/privacidad): un gesto físico simple — p. ej. cubrir un pequeño "capullo" sensor en un pedestal — "cierra los pétalos" y saca al visitante del sistema bio-reactivo al instante.
+Conversacional mínimo: sonidos ambientales suaves (no lingüísticos) como retroalimentación de proximidad.
+El opt-out físico y tangible (no un menú oculto) da agencia real y visible, clave para la ética del diseño afectivo en espacio público.
+Fase 4: Consideraciones de Usabilidad
+Criterio
+Evaluación
+Aprendizaje
+Alta — florecer/marchitarse es un código universal, no requiere instrucción previa.
+Eficiencia
+No hay comandos que aprender; el propio movimiento es la interacción, cero fricción cognitiva.
+Memorabilidad
+La experiencia multisensorial (visual + sonora) refuerza el recuerdo de cómo reaccionó el jardín.
+Error
+Lecturas fisiológicas ambiguas se representan como un "semi-brote" (estado intermedio), evitando afirmar una emoción incorrecta con certeza y reduciendo el costo de un error de sensado.
+Satisfacción
+El encuadre orgánico y positivo ("un jardín te da la bienvenida") resulta más placentero que uno de vigilancia ("un espejo te observa").
+Ética
+Mitigada mediante: (1) agregación y anonimato de datos, (2) no persistencia ("marchitamiento" automático), (3) opt-out físico visible e inmediato ("cerrar el capullo").
+Fase 6: Prototipado Rápido
+Pendiente — se realizará un prototipo de baja fidelidad en Figma que ilustre: (1) la vista general de la sala "jardín", (2) el estado de floración de una obra, y (3) el gesto de opt-out en el pedestal. Se adjuntará el enlace y las capturas correspondientes una vez elaborado.
