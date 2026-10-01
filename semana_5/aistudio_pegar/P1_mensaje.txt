@@ -1,0 +1,1 @@
+Imagen de la cámara del robot apuntando a la mesa asignada. Aplica los pasos 1 a 7 y devuelve solo el JSON.

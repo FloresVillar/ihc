@@ -1,0 +1,1 @@
+Fotografía de la mesa tomada por el robot. Analiza a los comensales y devuelve solo el JSON.

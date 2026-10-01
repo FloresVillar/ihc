@@ -1,0 +1,5 @@
+google-genai>=1.0
+gTTS>=2.5
+# opcionales
+pyttsx3>=2.90   # TTS sin conexión
+ollama>=0.4     # backend local (Gemma en la red del laboratorio)

@@ -1,0 +1,12 @@
+[
+  {
+    "imagen": "imagenes/entornos/anden_metro.jpg",
+    "texto": "Alto. Tren en movimiento a tu izquierda, muy cerca. Espera.",
+    "palabras": 10,
+    "reintento": false,
+    "recortado": false,
+    "latencia_s": 3.95,
+    "respuesta_cruda": "Alto. Tren en movimiento a tu izquierda, muy cerca. Espera.",
+    "audio": "/home/esau/ihc/semana_5/CC451_Lab05_20151445F_Esau_Flores/Scripts/audio/anden_metro.mp3"
+  }
+]

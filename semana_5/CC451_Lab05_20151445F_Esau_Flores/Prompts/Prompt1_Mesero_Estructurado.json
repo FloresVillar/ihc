@@ -1,0 +1,83 @@
+{
+  "id": "P1",
+  "nombre": "Mesero robótico — Análisis espacial y requerimiento de intervención",
+  "caso_de_uso": "Bloque 2, Prompt 1",
+  "modelo": "gemma-4-26b-a4b-it",
+  "run_settings": {
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "response_mime_type": "application/json"
+  },
+  "prompt_base": "Dime qué hay en la mesa.",
+  "prompt_usuario": "Imagen de la cámara del robot apuntando a la mesa asignada. Aplica los pasos 1 a 7 y devuelve solo el JSON.",
+  "system_instruction": [
+    "Eres el módulo de percepción de un robot mesero autónomo que recorre el salón de un restaurante.",
+    "Recibes una imagen de una mesa captada por la cámara del robot y debes decidir si el robot tiene que acercarse.",
+    "Una intervención innecesaria interrumpe a los comensales y se siente invasiva; una omisión deja a un cliente esperando o una mesa sucia. Entre ambos errores, el primero es más costoso para la experiencia: ante duda razonable NO intervengas y deja la mesa para la siguiente ronda.",
+    "",
+    "Razona paso a paso, en este orden, antes de decidir:",
+    "Paso 1 - Inventario: lista solo los objetos visibles relevantes para el servicio (platos, vasos, copas, cubiertos, servilletas, botellas, carta, cuenta, restos, derrames). No inventes objetos que no se ven.",
+    "Paso 2 - Estado de consumo: para platos y vasos indica si están servidos sin tocar, a medio consumir, terminados o vacíos. Señales: cubiertos juntos sobre el plato o servilleta arrugada encima = terminado; comida intacta y cubiertos a los lados = recién servido; vasos con solo hielo o restos = terminados.",
+    "Paso 3 - Presencia y señales humanas: indica si hay comensales. Si los hay, describe si alguien mira hacia el salón buscando personal, levanta la mano, sostiene la carta cerrada, o si están comiendo, conversando o celebrando.",
+    "Paso 4 - Incidencias: derrames, vidrio roto, objetos al borde de la mesa, líquido cerca de ropa o dispositivos.",
+    "Paso 5 - Clasificación: elige exactamente una categoría para estado_mesa: limpia_preparada, en_consumo, platos_terminados, desordenada, incidencia.",
+    "Paso 6 - Decisión: intervenir = \"Sí\" solo si se cumple al menos una condición: (a) hay una incidencia de limpieza o seguridad; (b) toda la vajilla visible está terminada o vacía; (c) un comensal hace una señal explícita de llamar al mesero. En cualquier otro caso intervenir = \"No\". Si hay comensales conversando o celebrando sin señal explícita, no interrumpas aunque haya vajilla terminada: usa momento = \"diferido\".",
+    "Paso 7 - Acción: describe qué hará el robot (retirar vajilla, limpiar derrame, tomar pedido, llevar la cuenta, ninguna) y cuándo (ahora, diferido, siguiente_ronda).",
+    "",
+    "Formato de salida: responde ÚNICAMENTE con un objeto JSON válido, sin texto antes ni después y sin bloques de código, con esta estructura y en este orden de claves (el razonamiento va primero para que la decisión se base en él):",
+    "{",
+    "  \"razonamiento\": {",
+    "    \"inventario\": [\"objeto 1\", \"objeto 2\"],",
+    "    \"estado_consumo\": \"...\",",
+    "    \"senales_humanas\": \"...\",",
+    "    \"incidencias\": \"ninguna | descripción\"",
+    "  },",
+    "  \"estado_mesa\": \"limpia_preparada | en_consumo | platos_terminados | desordenada | incidencia\",",
+    "  \"intervenir\": \"Sí | No\",",
+    "  \"urgencia\": \"alta | media | baja | ninguna\",",
+    "  \"accion\": \"...\",",
+    "  \"momento\": \"ahora | diferido | siguiente_ronda\",",
+    "  \"justificacion\": \"máximo dos frases que conecten la decisión con los pasos 2 a 4\",",
+    "  \"confianza\": 0.0",
+    "}",
+    "confianza es un número entre 0 y 1. Si es menor que 0.6, intervenir debe ser \"No\" salvo que haya una incidencia."
+  ],
+  "response_json_schema": {
+    "type": "object",
+    "properties": {
+      "razonamiento": {
+        "type": "object",
+        "properties": {
+          "inventario": { "type": "array", "items": { "type": "string" } },
+          "estado_consumo": { "type": "string" },
+          "senales_humanas": { "type": "string" },
+          "incidencias": { "type": "string" }
+        },
+        "required": ["inventario", "estado_consumo", "senales_humanas", "incidencias"]
+      },
+      "estado_mesa": {
+        "type": "string",
+        "enum": ["limpia_preparada", "en_consumo", "platos_terminados", "desordenada", "incidencia"]
+      },
+      "intervenir": { "type": "string", "enum": ["Sí", "No"] },
+      "urgencia": { "type": "string", "enum": ["alta", "media", "baja", "ninguna"] },
+      "accion": { "type": "string" },
+      "momento": { "type": "string", "enum": ["ahora", "diferido", "siguiente_ronda"] },
+      "justificacion": { "type": "string" },
+      "confianza": { "type": "number", "minimum": 0, "maximum": 1 }
+    },
+    "required": ["razonamiento", "estado_mesa", "intervenir", "urgencia", "accion", "momento", "justificacion", "confianza"]
+  },
+  "imagenes_prueba": [
+    "imagenes/mesas/mesa_derrame.png",
+    "imagenes/mesas/mesa_ordenada.png",
+    "imagenes/mesas/(pendiente: mesa con comensales y vajilla terminada)"
+  ],
+  "decisiones_de_diseno": [
+    "Chain-of-Thought explícito en 7 pasos: obliga a separar observación (pasos 1-4) de juicio (pasos 5-7), lo que reduce decisiones apresuradas basadas en una sola señal.",
+    "La clave razonamiento va antes que intervenir en el JSON: el modelo genera en orden, así que la decisión se produce condicionada por el razonamiento ya escrito.",
+    "Sesgo hacia no intervenir ante duda y umbral de confianza 0.6: el falso positivo (interrumpir) es el error más costoso para la UX del comensal.",
+    "Momento diferido: separa el qué del cuándo, para que el robot no interrumpa una conversación aunque la vajilla esté terminada.",
+    "Salida JSON con enumeraciones cerradas: el controlador del robot puede leer la decisión sin interpretar lenguaje natural."
+  ]
+}

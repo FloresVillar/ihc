@@ -1,0 +1,52 @@
+{
+  "P3": [
+    {
+      "imagen": "anden_metro.jpg",
+      "base": {
+        "respuesta": "Esta imagen captura una escena dinámica y con mucho movimiento en una estación de metro subterránea, probablemente en Italia.\n\nAquí tienes una descripción detallada:\n\n* **El tren y el movimiento:** En el lado izquierdo de la imagen, un tren de color blanco con una franja roja pasa rápidamente por el andén. El tren aparece muy borroso debido a un efecto de larga exposición o desenfoque por movimiento (*motion blur*), lo que transmite una fuerte sensación de velocidad y dinamismo en contraste con la quietud de las personas.\n* **Las personas en el andén:** En el centro y hacia la derecha, varias personas esperan en el andén. \n    * En el primer plano, destaca un hombre de espaldas, vestido con una camiseta negra, pantalones grises y zapatillas deportivas, que lleva una mochila blanca. \n    * Más a la derecha, una mujer con una camiseta rosa brillante y pantalones negros permanece de pie, mirando hacia la dirección del tren. \n    * Al fondo, se ve un grupo de personas esperando, lo que da profundidad a la escena.\n* **La arquitectura y señalización:** La estación tiene un diseño industrial con techos de hormigón curvos y paredes de textura rugosa. Hay carteles negros con letras blancas que indican \"**uscita**\" (salida en italiano) con flechas, lo que confirma la ubicación en Italia. En la parte superior derecha, se alcanza a ver parte de un cartel que dice \"**Colos...**\", lo que sugiere que se trata de la estación **Colosseo** en Roma.\n* **Composición y luz:** La imagen utiliza líneas de fuga muy marcadas (el borde del andén, la línea del tren y el techo) que guían la mirada del espectador hacia el fondo de la estación, creando una gran sensación de profundidad. La iluminación es artificial y algo tenue, típica de un entorno subterráneo, con luces brillantes que se reflejan en las ventanas del tren en movimiento.\n\nEn conjunto, la fotografía juega con el contraste entre la rapidez del transporte público y la espera paciente de los pasajeros.",
+        "palabras": 322,
+        "latencia_s": 46.05
+      },
+      "optimizado": {
+        "respuesta": "Alto. Tren en movimiento a tu izquierda, muy cerca. Espera.",
+        "latencia_s": 1.79,
+        "palabras": 10,
+        "cumple_25": true,
+        "reintento": false,
+        "recortado": false
+      }
+    },
+    {
+      "imagen": "cruce_obstaculo.png",
+      "base": {
+        "respuesta": "Esta imagen muestra una carretera asfaltada que ha sido bloqueada por una serie de rocas y escombros, posiblemente debido a un pequeño deslizamiento de tierra.\n\nEn el primer plano, a la izquierda, destaca una roca muy grande y redondeada que ocupa gran parte del carril. Más adelante, en el centro de la carretera, hay varias rocas de tamaño mediano esparcidas de forma irregular. A la derecha, se observa una acumulación de rocas más pequeñas y tierra que parecen haber caído desde una ladera empinada.\n\nEl fondo de la imagen está compuesto por un denso bosque de árboles coníferos (pinos o abetos) de color verde intenso. La luz parece ser la de un día despejado, con algo de claridad filtrándose a través de los árboles en la parte superior derecha. La escena sugiere un bloqueo en una ruta forestal o de montaña.",
+        "palabras": 141,
+        "latencia_s": 9.76
+      },
+      "optimizado": {
+        "respuesta": "Alto. Rocas grandes en el camino a tus 12 y a la derecha. Rodéalas por la izquierda.",
+        "latencia_s": 3.76,
+        "palabras": 17,
+        "cumple_25": true,
+        "reintento": false,
+        "recortado": false
+      }
+    },
+    {
+      "imagen": "pasillo_supermercado.jpg",
+      "base": {
+        "respuesta": "Esta es una fotografía de un pasillo de un supermercado, tomada desde una perspectiva que mira hacia el fondo del pasillo.\n\nAquí tienes una descripción detallada:\n\n* **Los laterales:** A ambos lados del pasillo, hay estanterías altas y densamente llenas de una gran variedad de productos en cajas, que parecen ser cereales, galletas y otros aperitivos. Los productos presentan una mezcla de colores y marcas.\n* **El primer plano (derecha):** En la parte derecha, cerca de la cámara, destaca un expositor vertical de color azul con un diseño de temática invernal. Tiene escrito \"Winter Favorites\" (Favoritos de invierno) y muestra una ilustración de un paisaje nevado con un árbol.\n* **El centro y el suelo:** El pasillo es ancho y tiene un suelo de color claro, muy pulido y brillante, que refleja las luces del techo. En el centro del pasillo, a media distancia, se ve a una persona de espaldas, vestida con una chaqueta oscura, empujando un carrito de la compra hacia el fondo de la tienda.\n* **El fondo:** Al final del pasillo, hay una pared de color rojo intenso. En ella se puede ver el logotipo de \"Mannaford\" y un mensaje que dice \"Thanks for shopping South...\" (Gracias por comprar en South...). Sobre el pasillo, cuelgan varios carteles indicadores de secciones, como \"granola/fruit snacks\", \"energy bars\" y \"cereal\". También se distingue el número de pasillo \"5\".\n* **Iluminación:** La tienda está muy bien iluminada con luces fluorescentes industriales en el techo, lo que crea un ambiente brillante y limpio, típico de un entorno comercial.",
+        "palabras": 253,
+        "latencia_s": 36.8
+      },
+      "optimizado": {
+        "respuesta": "Camino libre. Pasillo entre estanterías, con una persona con carrito a unos cinco metros al frente. Sigue recto.",
+        "latencia_s": 18.69,
+        "palabras": 18,
+        "cumple_25": true,
+        "reintento": false,
+        "recortado": false
+      }
+    }
+  ]
+}

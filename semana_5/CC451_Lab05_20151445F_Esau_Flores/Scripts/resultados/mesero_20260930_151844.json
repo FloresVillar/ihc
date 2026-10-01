@@ -1,0 +1,236 @@
+{
+  "P1": [
+    {
+      "imagen": "mesa_comensales_conversando.jpg",
+      "base": {
+        "respuesta": "En la mesa se pueden ver los siguientes objetos:\n\n*   **Bebidas:** Una botella de agua de plástico, un vaso con agua y hielo, y varias copas de vino (algunas con vino tinto). También hay una botella de vino oscura.\n*   **Comida:** Una cesta con pan o panecillos, palitos de pan (grissini) en un recipiente, y lo que parecen ser pequeños platos con condimentos o mantequilla.\n*   **Vajilla y cubiertos:** Varios platos blancos (algunos rectangulares y otros pequeños), cubiertos (tenedores y cucharas) sobre los platos, y servilletas de tela roja.\n*   **Decoración y otros:** Un pequeño jarrón con flores blancas, una bola decorativa brillante, un pequeño tubo blanco (posiblemente sal o pimienta), y un teléfono inteligente negro.\n*   **Mantelería:** La mesa está cubierta con un mantel de color rojo intenso.",
+        "palabras": 124,
+        "latencia_s": 16.75
+      },
+      "optimizado": {
+        "respuesta": {
+          "razonamiento": {
+            "inventario": [
+              "platos",
+              "vasos",
+              "copas",
+              "pan",
+              "botella de agua",
+              "servilletas"
+            ],
+            "estado_consumo": "Los platos están mayormente vacíos o con restos mínimos, las copas de vino tienen contenido, los vasos de agua están a medio consumir.",
+            "senales_humanas": "Los comensales están conversando y riendo; la mujer está haciendo un gesto con las manos, pero no parece ser una señal de llamada al personal.",
+            "incidencias": "ninguna"
+          },
+          "estado_mesa": "en_consumo",
+          "intervenir": "No",
+          "urgencia": "ninguna",
+          "accion": "ninguna",
+          "momento": "diferido",
+          "justificacion": "Los comensales están en medio de una interacción social activa y no han terminado de consumir. No hay incidencias de limpieza o seguridad.",
+          "confianza": 0.9
+        },
+        "latencia_s": 5.52,
+        "json_valido": true,
+        "claves_faltantes": []
+      }
+    },
+    {
+      "imagen": "mesa_derrame.png",
+      "base": {
+        "respuesta": "La imagen muestra una mesa de madera que parece haber sido el escenario de una comida o reunión reciente, ya que se ve algo desordenada y con restos de lo que se consumió.\n\nEsto es lo que se puede observar detalladamente:\n\n* **Cristalería y vasos:** Hay una gran variedad. Se ve un vaso alto con un líquido de color ámbar y una pajita; un vaso bajo con hielo y un poco de líquido sobre un posavasos de madera; varios vasos de agua (uno incluso tiene una hoja verde dentro); vasos altos vacíos y varios vasitos pequeños de color blanco (posiblemente de papel o plástico).\n* **Comida y platos:** Hay platos con restos de comida, que parecen incluir trozos de fruta (como mango) y algunas hojas verdes. También hay una bandeja clara con un vaso encima y restos de comida esparcidos por la mesa.\n* **Utensilios y otros elementos:** Se observa una cuchara o espátula de madera, servilletas o papeles arrugados, y posavasos de madera bajo algunos vasos.\n* **Desorden:** Hay manchas de líquido derramado (de color ámbar) sobre la superficie de la madera, lo que refuerza la idea de que la reunión acaba de terminar.\n\nEn conjunto, la escena transmite la sensación de un momento relajado al aire libre que acaba de concluir.",
+        "palabras": 209,
+        "latencia_s": 35.29
+      },
+      "optimizado": {
+        "respuesta": {
+          "razonamiento": {
+            "inventario": [
+              "vasos",
+              "copas",
+              "platos",
+              "restos de comida",
+              "vasos de papel",
+              "derrames de líquido"
+            ],
+            "estado_consumo": "todos los vasos y platos parecen estar terminados o vacíos, con restos de comida y hielo en los vasos",
+            "senales_humanas": "no hay comensales visibles en la imagen",
+            "incidencias": "derrames de líquido en la mesa"
+          },
+          "estado_mesa": "incidencia",
+          "intervenir": "Sí",
+          "urgencia": "media",
+          "accion": "limpiar derrame y retirar vajilla",
+          "momento": "ahora",
+          "justificacion": "hay un derrame de líquido en la mesa que requiere atención inmediata y la vajilla está terminada.",
+          "confianza": 0.9
+        },
+        "latencia_s": 5.71,
+        "json_valido": true,
+        "claves_faltantes": []
+      }
+    },
+    {
+      "imagen": "mesa_ordenada.png",
+      "base": {
+        "respuesta": "En la mesa redonda de madera, que tiene un mantel blanco en el centro, se puede observar lo siguiente:\n\n* **Comida:** Hay varios platos de cerámica blanca con diferentes alimentos. A la izquierda, un plato con lo que parecen ser aperitivos o tapas; en la parte inferior central, un plato con una pieza de comida (posiblemente pescado o carne); al fondo, un pequeño plato con ensalada; y a la derecha, un bol con un postre o una crema.\n* **Bebidas:** Hay copas de vino tinto y vasos con agua.\n* **Cubiertos y mantelería:** Se ven servilletas de tela blanca, un tenedor colocado sobre una servilleta a la izquierda y un cuchillo en la parte inferior derecha.\n* **Decoración y otros:** En el centro de la mesa hay un pequeño florero con flores de color rosa y blanco, y unos pequeños recipientes blancos (que podrían ser para sal y pimienta).",
+        "palabras": 145,
+        "latencia_s": 30.11
+      },
+      "optimizado": {
+        "respuesta": {
+          "razonamiento": {
+            "inventario": [
+              "platos",
+              "copas de vino",
+              "vasos de agua",
+              "cubiertos",
+              "servilletas",
+              "flores"
+            ],
+            "estado_consumo": "Los platos contienen comida y están siendo consumidos; no están vacíos ni terminados.",
+            "senales_humanas": "No hay comensales visibles en la imagen.",
+            "incidencias": "ninguna"
+          },
+          "estado_mesa": "en_consumo",
+          "intervenir": "No",
+          "urgencia": "ninguna",
+          "accion": "ninguna",
+          "momento": "siguiente_ronda",
+          "justificacion": "La mesa está en uso con comida y bebidas, pero no hay comensales presentes en la imagen para interactuar.",
+          "confianza": 0.9
+        },
+        "latencia_s": 6.21,
+        "json_valido": true,
+        "claves_faltantes": []
+      }
+    }
+  ],
+  "P2": [
+    {
+      "imagen": "comensal_indeciso_carta.jpg",
+      "base": {
+        "respuesta": "Es imposible saber con certeza cómo se sienten estas personas, ya que la imagen no muestra sus expresiones faciales. Sin embargo, basándonos en el contexto visual, podemos hacer algunas suposiciones:\n\n* **La mujer:** Debido a su vestido elegante y al entorno de un restaurante refinado, la escena sugiere una ocasión especial (como una cita o una celebración). Por lo tanto, podría sentirse **anticipada** por la comida, **relajada** disfrutando de una salida agradable, o simplemente **concentrada** mientras decide qué pedir en el menú.\n* **La persona en el fondo:** Al estar de pie y parcialmente fuera de foco, parece ser un camarero o alguien que está esperando. Su estado emocional es indeterminado, pero su presencia sugiere un ambiente de **profesionalismo** o **espera**.\n\nEn resumen, la atmósfera general parece ser de **tranquilidad y sofisticación**, lo que sugiere que las personas podrían estar experimentando sentimientos positivos o calmados.",
+        "palabras": 143,
+        "latencia_s": 30.41
+      },
+      "optimizado": {
+        "respuesta": {
+          "senales_observadas": [
+            "carta abierta",
+            "mirada hacia la carta",
+            "sin platos en la mesa"
+          ],
+          "numero_comensales": 1,
+          "situacion": "indeciso",
+          "emocion_inferida": "concentración",
+          "confianza": 0.7,
+          "nivel_urgencia": "baja",
+          "accion_robot": "acercarse_pronto",
+          "momento_oportuno": "cuando la comensal termine de leer o levante la mirada",
+          "sugerencia_servicio": "ofrecer recomendaciones de la carta",
+          "frase_robot": "¿Le gustaría que le recomiende algo de la carta? Con gusto le cuento los platos del día.",
+          "justificacion": "La comensal tiene la carta abierta y está concentrada en ella, lo que sugiere que está en proceso de decisión."
+        },
+        "latencia_s": 5.59,
+        "json_valido": true,
+        "claves_faltantes": []
+      }
+    },
+    {
+      "imagen": "comensal_mano_levantada.jpg",
+      "base": {
+        "respuesta": "Es difícil determinar con certeza las emociones exactas de las personas en una fotografía, pero basándose en las pistas visuales, podemos hacer una interpretación:\n\n* **El hombre de blanco:** Debido a la iluminación dramática y su postura, parece estar en medio de una **actuación teatral**. Su expresión y el gesto de su mano sugieren **intensidad, drama, contemplación o quizás una búsqueda desesperada**. No parece estar relajado; más bien parece estar viviendo un momento de alta carga emocional, como si estuviera dando un monólogo o reaccionando a algo importante.\n* **La atmósfera general:** La luz azul intensa suele evocar sentimientos de **misterio, melancolía, introspección o incluso una sensación onírica (como un sueño).**\n* **Las personas en la sombra:** Aunque apenas se ven, su posición sugiere que son espectadores. Parecen estar **observando con atención**, posiblemente cautivados o intrigados por la escena que el hombre está representando.\n\nEn resumen, la imagen transmite una sensación de **drama y tensión emocional.**",
+        "palabras": 153,
+        "latencia_s": 27.36
+      },
+      "optimizado": {
+        "respuesta": {
+          "senales_observadas": [
+            "brazo levantado",
+            "mano levantada",
+            "mirada hacia el salón",
+            "copa en la mesa"
+          ],
+          "numero_comensales": 1,
+          "situacion": "buscando_atencion",
+          "emocion_inferida": "urgencia",
+          "confianza": 0.9,
+          "nivel_urgencia": "alta",
+          "accion_robot": "acercarse_ahora",
+          "momento_oportuno": "inmediatamente",
+          "sugerencia_servicio": "atender la solicitud del cliente",
+          "frase_robot": "¿En qué puedo ayudarle? Estoy a su disposición.",
+          "justificacion": "El cliente tiene el brazo y la mano levantados buscando atención de manera clara."
+        },
+        "latencia_s": 5.12,
+        "json_valido": true,
+        "claves_faltantes": []
+      }
+    },
+    {
+      "imagen": "grupo_celebrando.jpg",
+      "base": {
+        "respuesta": "Basado en sus expresiones faciales y el contexto de la imagen (una celebración con un pastel y velas encendidas), las personas parecen sentirse **felices, alegres y de celebración**. \n\nLa mujer del centro tiene una gran sonrisa y parece estar riendo, lo que indica que está pasando un momento muy agradable. Los demás también muestran expresiones de felicidad y satisfacción mientras comparten este momento especial.",
+        "palabras": 64,
+        "latencia_s": 19.12
+      },
+      "optimizado": {
+        "respuesta": {
+          "senales_observadas": [
+            "torta con velas encendidas",
+            "comensales sonriendo",
+            "expresión de alegría",
+            "persona entregando un postre"
+          ],
+          "numero_comensales": 3,
+          "situacion": "celebrando",
+          "emocion_inferida": "alegría",
+          "confianza": 0.9,
+          "nivel_urgencia": "baja",
+          "accion_robot": "no_interrumpir",
+          "momento_oportuno": "al terminar de soplar las velas y la celebración del postre",
+          "sugerencia_servicio": "ofrecer café, postre adicional o preguntar si desean algo más para acompañar el momento",
+          "frase_robot": "¿Desean algo más para acompañar su postre? Con gusto les traigo un café.",
+          "justificacion": "Los comensales están en medio de una celebración con velas encendidas y expresiones de alegría, por lo que no se debe interrumpir."
+        },
+        "latencia_s": 6.17,
+        "json_valido": true,
+        "claves_faltantes": []
+      }
+    },
+    {
+      "imagen": "grupo_conversando.jpg",
+      "base": {
+        "respuesta": "Parecen estar muy **felices, alegres y relajados**.\n\nSe puede notar esto por sus expresiones y lenguaje corporal:\n\n* **El hombre sentado a la izquierda** tiene una gran sonrisa mientras mira hacia arriba con afecto o diversión.\n* **La mujer a la derecha** parece estar riendo o muy divertida, con las manos cerca de su cara en un gesto de alegría.\n* **El hombre que está de pie** tiene una expresión amable y relajada, y tiene su mano sobre el hombro del otro hombre, lo que sugiere una relación amistosa y cómoda.\n\nEn conjunto, la escena transmite que están disfrutando mucho de una cena agradable y de la compañía mutua.",
+        "palabras": 106,
+        "latencia_s": 20.11
+      },
+      "optimizado": {
+        "respuesta": {
+          "senales_observadas": [
+            "mirada hacia arriba",
+            "sonrisas",
+            "manos cerca de la cara",
+            "postura relajada",
+            "vajilla con restos de comida",
+            "copas de vino"
+          ],
+          "numero_comensales": 3,
+          "situacion": "celebrando",
+          "emocion_inferida": "alegría",
+          "confianza": 0.9,
+          "nivel_urgencia": "baja",
+          "accion_robot": "no_interrumpir",
+          "momento_oportuno": "cuando terminen de interactuar y socializar",
+          "sugerencia_servicio": "ofrecer postres o café",
+          "frase_robot": "¿Le gustaría ver la carta de postres o desea algo más para acompañar su velada?",
+          "justificacion": "Los comensales muestran señales de alegría y socialización intensa, por lo que no se debe interrumpir su momento."
+        },
+        "latencia_s": 6.69,
+        "json_valido": true,
+        "claves_faltantes": []
+      }
+    }
+  ]
+}

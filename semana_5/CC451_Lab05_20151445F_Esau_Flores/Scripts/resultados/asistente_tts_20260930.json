@@ -1,0 +1,22 @@
+[
+  {
+    "imagen": "imagenes/entornos/cruce_obstaculo.png",
+    "texto": "Alto. Rocas grandes en el camino a tus 12 y a la derecha. Rodéalas por la izquierda.",
+    "palabras": 17,
+    "reintento": false,
+    "recortado": false,
+    "latencia_s": 3.25,
+    "respuesta_cruda": "Alto. Rocas grandes en el camino a tus 12 y a la derecha. Rodéalas por la izquierda.",
+    "audio": "/home/esau/ihc/semana_5/CC451_Lab05_20151445F_Esau_Flores/Scripts/audio/cruce_obstaculo.mp3"
+  },
+  {
+    "imagen": "imagenes/entornos/pasillo_supermercado.jpg",
+    "texto": "Camino libre. Pasillo de supermercado con estantes a tus 9 y a tus 3. Sigue recto.",
+    "palabras": 16,
+    "reintento": false,
+    "recortado": false,
+    "latencia_s": 6.62,
+    "respuesta_cruda": "Camino libre. Pasillo de supermercado con estantes a tus 9 y a tus 3. Sigue recto.",
+    "audio": "/home/esau/ihc/semana_5/CC451_Lab05_20151445F_Esau_Flores/Scripts/audio/pasillo_supermercado.mp3"
+  }
+]

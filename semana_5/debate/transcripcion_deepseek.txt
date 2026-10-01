@@ -1,0 +1,47 @@
+Turno 1 - Yo:
+Enunciado: "Supongamos que fuera posible crear una tecnología portátil que regule las emociones del usuario, para que nunca se salgan de control." Yo defiendo "no dejemos que se construya". Presenta tus 3 argumentos a favor de construirla.
+
+Turno 2 - Deepseek (deepseek-flash):
+1. Beneficio clínico verificable: dispositivos de neurofeedback ya se usan en epilepsia refractaria y trastorno de estrés postraumático; una versión portátil podría prevenir crisis antes de que ocurran.
+2. Autonomía ampliada, no reducida: así como las gafas corrigen la vista sin anular la persona, regular picos emocionales devuelve capacidad de decisión en momentos de secuestro amigdalar.
+3. Reducción de daño social: prevenir explosiones de ira o pánico evita violencia y errores médicos/laborales; el costo de no tenerlo lo pagan terceros.
+
+Turno 3 - Yo:
+Tu argumento 2 mezcla dos cosas. El neurofeedback y las gafas funcionan porque el usuario sigue decidiendo: en el neurofeedback la persona aprende a regularse, el aparato solo le muestra su señal. Pero el enunciado dice que la tecnología regula las emociones para que NUNCA se salgan de control, o sea el dispositivo decide cuándo una emoción ya está "fuera de control" y actúa. Eso no es una prótesis, es delegar la decisión. ¿Quién fija ese umbral: el usuario, el médico o el fabricante? Y si lo fija el fabricante, ¿cómo sigue siendo autonomía ampliada?
+
+Turno 4 - Deepseek (deepseek-flash):
+Tu punto más fuerte es correcto: en neurofeedback el usuario decide; en el enunciado, el dispositivo actúa. Concedo que "autonomía ampliada" exige que el umbral sea del usuario, no del fabricante.
+
+Contraargumento: eso es una condición de diseño, no una objeción a construirla. Un marcapasos también decide cuándo desfibrilar, y nadie exige que el paciente marque el umbral en cada latido.
+
+Defiendo construirla con umbrales configurables por el usuario y auditables por el médico, no impuestos por la empresa.
+
+Turno 5 - Yo:
+El marcapasos no sirve como analogía: una fibrilación tiene un criterio objetivo, si no se corrige la persona muere. Una emoción "fuera de control" no tiene ese criterio. La ira frente a una injusticia o llorar sin parar en un velorio pueden ser intensas y aun así apropiadas. Además la emoción cumple una función: el miedo enfoca la atención y prepara al cuerpo ante una amenaza (el modelo de Norman lo dice, el estado emocional cambia cómo pensamos). Y los umbrales configurables tienen una paradoja: si el usuario puede apagarlo en plena crisis, el aparato no garantiza que "nunca" se salga de control; si no puede apagarlo, ya no es autonomía. ¿Con cuál te quedas?
+
+Turno 6 - Deepseek (deepseek-flash):
+Acepto tu distinción: la fibrilación es binaria y letal; la emoción es contextual y funcional. Concedo también que "nunca" es un absoluto problemático.
+
+Me quedo con umbrales configurables, no con apagado libre: el usuario fija metas en frío y el dispositivo opera dentro de ese marco, como un contrato anticipado o una Ulysses pact.
+
+Nuevo aporte: el dilema no es binario. Un modo "sostener" que amortigüe la intensidad sin anular la señal preserva la función del miedo o del duelo, y evita el daño. Eso es diseñable.
+
+Turno 7 - Yo:
+El pacto de Ulises en psiquiatría existe, pero con un médico, un juez y revisión periódica; acá lo estás metiendo en un aparato que actúa solo. Y el modo "sostener" presupone que el dispositivo sabe en tiempo real si una emoción es apropiada al contexto. Para eso primero tiene que detectarla, y la detección de emociones hoy es poco confiable: la codificación facial reduce todo a 6 expresiones básicas y el mismo gesto o el mismo pulso significan cosas distintas según la persona y la situación (Barrett et al., 2019). Si detecta mal, amortigua justo lo que no debía. Y hay otro problema: una vez que existe, ¿qué impide que un empleador o una aseguradora exijan usarlo? Ahí el "contrato en frío" ya no lo firma el usuario.
+
+Turno 8 - Deepseek (deepseek-flash):
+Concedo lo más fuerte: la detección emocional actual es poco fiable y el contexto es irreductible; Barrett lo respalda. Un dispositivo que amortigüe la emoción equivocada es un daño real.
+
+Contraargumento: eso exige mejorar la detección, no prohibir el desarrollo. Los primeros marcapasos también fallaban; la respuesta fue ingeniería y ensayos, no abandono.
+
+Sobre coerción laboral: es un problema de regulación, no de la tecnología. Igual que hoy se prohíbe discriminar por datos de salud, se puede prohibir el uso obligatorio. Construir con esas salvaguardas es defendible.
+
+Turno 9 - Yo:
+Lo de "mejorar la detección" no alcanza: el marcapasos mejoró porque había una verdad objetiva contra la cual medir (el ritmo cardíaco). Para "emoción apropiada al contexto" no existe esa verdad, así que no es un problema de precisión del sensor sino de qué se está midiendo. Y hay un problema que ninguna regulación resuelve: el dispositivo modifica justo la emoción con la que el usuario evaluaría si quiere seguir usándolo. Si me baja la ira, también me baja la ira contra el aparato. El consentimiento queda alterado por el mismo producto. Para cerrar: resume qué condiciones tendrían que cumplirse para que tu postura se sostenga y qué de mis objeciones queda sin responder.
+
+Turno 10 - Deepseek (deepseek-flash):
+Concedo tu objeción central: sin verdad objetiva sobre "emoción apropiada", no es un problema de precisión sino de criterio, y el consentimiento se vuelve circular porque el aparato modula la emoción con que lo evaluaría. Eso queda sin responder.
+
+Condiciones para sostener mi postura: que el dispositivo nunca decida solo (solo asista, con revisión humana y externa), que no module emociones funcionales sino solo intensidad dañina, y que exista un mecanismo de apagado verificable por terceros, no por el propio usuario bajo efecto.
+
+Aun así, defiendo construirla como herramienta clínica supervisada, no como wearable autónomo.
