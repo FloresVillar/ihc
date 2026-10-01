@@ -1,0 +1,20 @@
+03 diseños / home                             similitud  99.2%   tinta exacta  68.5%   tinta ±1px  98.7%
+03 diseños / caso de estudio                  similitud  98.2%   tinta exacta  68.1%   tinta ±1px  97.8%
+04 componentes / navegacion                   similitud  98.7%   tinta exacta  85.6%   tinta ±1px 100.0%
+04 componentes / pie de pagina                similitud  99.4%   tinta exacta  74.1%   tinta ±1px 100.0%
+04 componentes / biografia personal           similitud  97.5%   tinta exacta  42.3%   tinta ±1px  98.2%
+04 componentes / encabezado de seccion        similitud  97.9%   tinta exacta  50.8%   tinta ±1px  99.9%
+04 componentes / tarjeta proyecto             similitud  99.2%   tinta exacta  78.0%   tinta ±1px  99.4%
+04 componentes / texto impactante             similitud  99.0%   tinta exacta  89.8%   tinta ±1px  98.9%
+04 componentes / bloque de texto              similitud  89.1%   tinta exacta  26.6%   tinta ±1px  93.4%
+04 componentes / bloque de imagen             similitud  99.9%   tinta exacta 100.0%   tinta ±1px 100.0%
+04 componentes / bloque de cita               similitud  98.7%   tinta exacta  52.9%   tinta ±1px  98.2%
+04 componentes / lista de habilidades         similitud  98.0%   tinta exacta  71.3%   tinta ±1px  99.4%
+04 componentes / boton principal              similitud  96.4%   tinta exacta  91.6%   tinta ±1px 100.0%
+04 componentes / boton/boton                  similitud  97.0%   tinta exacta  68.1%   tinta ±1px  99.2%
+04 componentes / gusano                       similitud  99.7%   tinta exacta 100.0%   tinta ±1px 100.0%
+04 componentes / diamante                     similitud  99.3%   tinta exacta 100.0%   tinta ±1px 100.0%
+04 componentes / flor                         similitud  99.5%   tinta exacta 100.0%   tinta ±1px 100.0%
+04 componentes / ala                          similitud  99.4%   tinta exacta 100.0%   tinta ±1px 100.0%
+04 componentes / arco                         similitud  99.8%   tinta exacta 100.0%   tinta ±1px 100.0%
+01 exploraciones / exploracion de casos       similitud  97.0%   tinta exacta  53.1%   tinta ±1px  91.1%

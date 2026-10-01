@@ -1,0 +1,7 @@
+<svg width="996" height="80" viewBox="0 0 996 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="996" height="80" fill="white"/>
+<text id="nombre" x="23.80" y="38.40" font-family="Inter" font-weight="800" font-size="20" fill="black" xml:space="preserve">Nombre Apellido</text><g id="links"><text x="286.00" y="43.40" font-family="Inter" font-weight="900" font-size="20" fill="black" xml:space="preserve">link</text><text x="380.00" y="43.40" font-family="Inter" font-weight="900" font-size="20" fill="black" xml:space="preserve">link</text><text x="474.00" y="43.40" font-family="Inter" font-weight="900" font-size="20" fill="black" xml:space="preserve">link</text><text x="568.00" y="43.40" font-family="Inter" font-weight="900" font-size="20" fill="black" xml:space="preserve">link</text><text x="662.00" y="43.40" font-family="Inter" font-weight="900" font-size="20" fill="black" xml:space="preserve">link</text></g><g id="boton principal"><rect x="762.5" y="14" width="209" height="52" rx="8" fill="black"/><text x="772.20" y="47.20" font-family="Inter" font-weight="600" font-size="20" fill="white" xml:space="preserve">continuar/siguiente</text></g>
+<defs>
+
+</defs>
+</svg>
