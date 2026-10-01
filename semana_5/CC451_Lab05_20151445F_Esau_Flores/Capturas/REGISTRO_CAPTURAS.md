@@ -96,3 +96,45 @@ Las capturas `API_Pruebas_*` son las mismas pruebas ejecutadas por la Gemini API
   - Separa el qué del cuándo tal como se diseñó: `intervenir: No` ahora, pero deja `accion: retirar vajilla` con `momento: diferido` para cuando termine la conversación.
   - La justificación cita casi textualmente la regla del prompt ("no se debe interrumpir aunque haya platos terminados"): el razonamiento es trazable a la instrucción.
   - Coincide con la API (`API_Pruebas_Mesero_P1_1.png`: en_consumo, No, diferido, 0.9). En la API `accion` fue "ninguna"; aquí el modelo anticipa la acción diferida, que es más útil para el robot.
+
+## AIStudio_Pruebas_Invidente_1 a 3 — Prompt 3 (Assistive Vision)
+
+- **Capturas:** una por prueba, con la imagen, el mensaje y la respuesta en el mismo cuadro: `AIStudio_Pruebas_Invidente_1.png` (cruce con rocas), `AIStudio_Pruebas_Invidente_2.png` (andén) y `AIStudio_Pruebas_Invidente_3.png` (pasillo de supermercado).
+- **Configuración:** system instruction del Prompt 3 · temperature 0.2 · Thinking level High · sin Structured outputs · Grounding with Google Search activo.
+- **Mensaje:** "Cuadro actual de la cámara de las gafas. Dame la indicación de navegación urgente."
+- **Contexto:** las tres se corrieron en el mismo chat que las pruebas anteriores ("Análisis de Mesa y Pedido"), cambiando la system instruction. Los tokens acumulados pasan de 11 933 a 14 727, así que el modelo tenía en el contexto las imágenes y respuestas previas. Ninguna respuesta arrastra nada de ellas.
+
+| Prueba | Imagen | Hora | Respuesta AI Studio | Palabras | Respuesta API (`API_Pruebas_Invidente_*`) |
+|---|---|---|---|---|---|
+| 1 | `entornos/cruce_obstaculo.png` | 8:13 p. m. | "Alto. Rocas al frente a dos metros. Detente." | 8 | "Alto. Rocas grandes en el camino a tus 12 y a la derecha. Rodéalas por la izquierda." (17) |
+| 2 | `entornos/anden_metro.jpg` | 8:14 p. m. | "Alto. Tren en movimiento a tus 9, a un metro. Aléjate del borde." | 12 | "Alto. Tren en movimiento a tu izquierda, muy cerca. Espera." (10) |
+| 3 | `entornos/pasillo_supermercado.jpg` | 8:15 p. m. | "Camino libre. Pasillo despejado al frente." | 6 | "Camino libre. Pasillo de supermercado con estantes a tus 9 y a tus 3. Sigue recto." (16) |
+
+- **Observaciones:**
+  - Las tres cumplen el formato de voz: empiezan con la palabra de alerta o con "Camino libre", tienen entre 6 y 12 palabras (dentro del rango ideal de 8 a 15, salvo la 3) y no traen markdown.
+  - **Cruce:** mejor que por API. No da una orientación equivocada ni propone rodear por un lado que también tiene piedras; da la distancia y una acción segura ("Detente"). Sigue sin decir por dónde pasar, pero ante la duda detenerse es lo correcto.
+  - **Andén:** mejor que por API. Usa la notación horaria ("a tus 9"), da la distancia y añade "Aléjate del borde", que era justo lo que le faltaba a la corrida por API.
+  - **Pasillo:** repite el falso "Camino libre". El exhibidor azul que está en el centro del pasillo, a pocos metros, no aparece, igual que por API. Confirma que el fallo no depende de la vía ni de la redacción: el prompt optimizado, al pedir brevedad y priorizar riesgos dinámicos, deja pasar obstáculos estáticos en medio del camino. Refuerza la propuesta de hacer el Prompt 3 en dos pasos (lista de obstáculos en JSON y después la frase).
+  - Con temperatura 0.2 las frases cambian respecto de la API en las tres pruebas, pero la decisión de fondo (alerta o camino libre) es la misma.
+
+## AIStudio_Pruebas_Mesero_4 a 7 — Prompt 2 (diagnóstico empático)
+
+- **Capturas:** una por prueba, con imagen, mensaje y respuesta en el mismo cuadro: `AIStudio_Pruebas_Mesero_4.png` (mano levantada), `_5.png` (comensal con la carta), `_6.png` (cumpleaños) y `_7.png` (grupo conversando, prueba adicional).
+- **Configuración:** system instruction del Prompt 2 ("Eres el módulo de interacción social…") · temperature 0.3 · Thinking level High · sin Structured outputs · Grounding with Google Search activo.
+- **Mensaje:** "Fotografía de la mesa tomada por el robot. Analiza a los comensales y devuelve solo el JSON."
+- **Contexto:** se corrieron en el mismo chat que las pruebas anteriores (17 122 a 22 446 tokens acumulados). Un primer intento con estas imágenes se hizo por error con la system instruction del Prompt 1 y no se usa en la matriz.
+
+| Prueba | Imagen | Hora | situacion · accion_robot · urgencia · confianza | momento_oportuno | frase_robot | API |
+|---|---|---|---|---|---|---|
+| 4 | `comensales/comensal_mano_levantada.jpg` | 8:21 p. m. | buscando_atencion · acercarse_ahora · alta · 0.9 | "ahora" | "¿En qué puedo ayudarle?" | Igual: buscando_atencion · acercarse_ahora · alta · 0.9 |
+| 5 | `comensales/comensal_indeciso_carta.jpg` | 8:20 p. m. | indeciso · **observar** · baja · **0.5** | "cuando la comensal levante la mirada" | "¿Le gustaría que le recomiende algún plato de la carta?" | indeciso · acercarse_pronto · baja · 0.7, frase copiada del few-shot |
+| 6 | `comensales/grupo_celebrando.jpg` | 8:24 p. m. | celebrando · no_interrumpir · baja · 0.95 | "después de que soplen las velas o termine el momento central" | "¿Gusta que les tome una fotografía de este momento especial?" | Igual decisión (0.9); ofrecía café |
+| 7 | `comensales/grupo_conversando.jpg` | 8:25 p. m. | **satisfecho_sin_necesidad** · no_interrumpir · baja · 0.9 | "cuando la interacción social disminuya o terminen su conversación" | "" (vacía) | celebrando · no_interrumpir · 0.9 |
+
+- **Observaciones:**
+  - Las cuatro respuestas son JSON válido con las 11 claves del esquema, sin Structured outputs.
+  - **Mano levantada:** misma decisión que por API. La frase es más corta y sigue siendo neutra.
+  - **Comensal con la carta:** AI Studio es más prudente que la API. Elige `observar` y espera el contacto visual, que es la primera opción del principio 5 ("espera a que haya contacto visual"), y baja la confianza a 0.5, por debajo del tope de 0.6 para señales ambiguas: no se ve la cara. La frase ya no es copia literal del ejemplo few-shot, aunque sigue muy cerca de él.
+  - **Cumpleaños:** misma decisión. La sugerencia toma la idea del ejemplo few-shot (ofrecer la foto grupal) en vez del café de la API. Ofrecer la foto mientras están en el momento central sería interrumpir, pero el `momento_oportuno` la pospone.
+  - **Grupo conversando:** corrige el error de la API. Clasifica `satisfecho_sin_necesidad`, la categoría que el reporte señalaba como la correcta, y deja `frase_robot` vacía, coherente con "si están satisfechos y conversando, no hagas nada". El prompt no dice qué poner en la frase cuando no hay que hablar; conviene definirlo (por ejemplo, `null`) para que el controlador no tenga que interpretar una cadena vacía.
+  - Ninguna frase nombra la emoción inferida y ninguna respuesta menciona rasgos sensibles.
