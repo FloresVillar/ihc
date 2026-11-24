@@ -1,0 +1,421 @@
+{
+ "desktop|P01 · Bienvenida": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P02 · Ingreso": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P03 · Rol y preferencias": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h3:nth-child(3)"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P04 · Calibración": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P05 · Dojo": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h3"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P06 · Camino de combates": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P07 · Combate": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h3"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 2,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P08 · Llamada de vishing": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "landmark-one-main",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Document should have one main landmark",
+    "ex": "html"
+   },
+   {
+    "id": "page-has-heading-one",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Page should contain a level-one heading",
+    "ex": "html"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 5,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P09 · Debrief": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": ".card:nth-child(3) > h3"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P10 · Mi progreso": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": ".card:nth-child(2) > h3"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P11 · Salas": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": ".card:nth-child(1) > h3"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P12 · Torneo": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P13 · Tablero de cinturones": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P14 · Ajustes": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h3:nth-child(1)"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P15 · Panel administrador": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h3"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "desktop|P16 · Sensei por voz": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".presenter"
+   }
+  ]
+ },
+ "movil|P01 · Bienvenida": {
+  "hscroll": false,
+  "v": []
+ },
+ "movil|P02 · Ingreso": {
+  "hscroll": false,
+  "v": []
+ },
+ "movil|P03 · Rol y preferencias": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h3:nth-child(3)"
+   }
+  ]
+ },
+ "movil|P04 · Calibración": {
+  "hscroll": false,
+  "v": []
+ },
+ "movil|P05 · Dojo": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h3"
+   }
+  ]
+ },
+ "movil|P06 · Camino de combates": {
+  "hscroll": false,
+  "v": []
+ },
+ "movil|P07 · Combate": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h3"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 1,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".actions"
+   }
+  ]
+ },
+ "movil|P08 · Llamada de vishing": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "landmark-one-main",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Document should have one main landmark",
+    "ex": "html"
+   },
+   {
+    "id": "page-has-heading-one",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Page should contain a level-one heading",
+    "ex": "html"
+   },
+   {
+    "id": "region",
+    "impact": "moderate",
+    "n": 4,
+    "help": "All page content should be contained by landmarks",
+    "ex": ".sid"
+   }
+  ]
+ },
+ "movil|P09 · Debrief": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": ".card:nth-child(3) > h3"
+   }
+  ]
+ },
+ "movil|P10 · Mi progreso": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": ".card:nth-child(2) > h3"
+   }
+  ]
+ },
+ "movil|P11 · Salas": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": ".card:nth-child(1) > h3"
+   }
+  ]
+ },
+ "movil|P12 · Torneo": {
+  "hscroll": false,
+  "v": []
+ },
+ "movil|P13 · Tablero de cinturones": {
+  "hscroll": false,
+  "v": []
+ },
+ "movil|P14 · Ajustes": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h3:nth-child(1)"
+   }
+  ]
+ },
+ "movil|P15 · Panel administrador": {
+  "hscroll": false,
+  "v": [
+   {
+    "id": "heading-order",
+    "impact": "moderate",
+    "n": 1,
+    "help": "Heading levels should only increase by one",
+    "ex": "h3"
+   }
+  ]
+ },
+ "movil|P16 · Sensei por voz": {
+  "hscroll": false,
+  "v": []
+ }
+}

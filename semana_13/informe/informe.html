@@ -1,0 +1,94 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Evaluación automatizada de usabilidad y accesibilidad – CyberDojo</title>
+<style>
+@page{size:A4;margin:18mm 16mm}
+body{font-family:"DejaVu Sans",Arial,sans-serif;font-size:10.5pt;line-height:1.45;color:#1f2430}
+h1{font-size:20pt;margin:0 0 4pt;color:#7a1f1f}h2{font-size:14pt;border-bottom:2px solid #7a1f1f;padding-bottom:3pt;margin-top:20pt;color:#7a1f1f;break-after:avoid}
+h3{font-size:11.5pt;margin:14pt 0 4pt;break-after:avoid}
+.meta{font-size:9.5pt;color:#444;margin-bottom:10pt}.meta td{padding:1pt 8pt 1pt 0;vertical-align:top}
+table.t{border-collapse:collapse;width:100%;margin:6pt 0 10pt;font-size:9.5pt;break-inside:avoid}
+.t th{background:#7a1f1f;color:#fff;text-align:left;padding:4pt 6pt}.t td{border:1px solid #ccc;padding:4pt 6pt;vertical-align:top}
+.t tr:nth-child(even) td{background:#f6f3f0}
+figure{margin:8pt 0 12pt;text-align:center;break-inside:avoid}figure img{max-width:100%;border:1px solid #ccc}
+figcaption{font-size:8.8pt;color:#555;margin-top:3pt}
+.pair{display:flex;gap:8pt;justify-content:center}.pair figure{flex:1;margin:0}
+.box{background:#f6f3f0;border-left:4px solid #7a1f1f;padding:6pt 9pt;margin:8pt 0;break-inside:avoid}
+.score{display:flex;gap:10pt;margin:8pt 0}.score div{flex:1;text-align:center;border:1px solid #ccc;padding:6pt;border-radius:6pt}.score b{display:block;font-size:20pt;color:#0a7d3a}
+code{font-size:9pt;background:#eee;padding:0 2pt}
+</style></head><body>
+<h1>Evaluación automatizada de usabilidad y accesibilidad</h1>
+<div style="font-size:12pt;margin-bottom:8pt">Tarea Lec 14 · CC451 Interacción Humano-Computador · CyberDojo v0.3 (grupo 15)</div>
+<table class="meta">
+<tr><td><b>Alumno</b></td><td>Esau Flores Villar (20151445F)</td></tr>
+<tr><td><b>Sitio evaluado</b></td><td>CyberDojo v0.3, PWA de entrenamiento en ciberseguridad por voz y chat, servida en local (<code>http://localhost:8080/app/</code>)</td></tr>
+<tr><td><b>Repositorio</b></td><td>github.com/FloresVillar/cc451-IHC-grupo15-cyberdojo</td></tr>
+<tr><td><b>Herramientas</b></td><td>Lighthouse 12.2.1 (Chrome 151, emulación móvil), axe-core 4.10.2 (WCAG 2.0/2.1 A y AA y buenas prácticas), Playwright para las capturas</td></tr>
+</table>
+
+<h2>1. Resumen</h2>
+<div class="box">CyberDojo tiene una base de accesibilidad sólida: Lighthouse da <b>100</b> en Accesibilidad y Buenas prácticas, y axe no encontró fallas de contraste ni errores serios en las 16 pantallas. Los tres problemas por corregir son de estructura y rendimiento: la <b>pantalla de llamada (P08) no tiene <code>main</code> ni <code>h1</code></b>, los <b>encabezados saltan de nivel</b> en la mayoría de pantallas, y el sitio <b>no comprime texto</b> y carga unos 170 KiB de JavaScript evitables. Los dos primeros afectan a usuarios de lector de pantalla, que es justo el público que el proyecto dice atender.</div>
+
+<h2>2. Metodología</h2>
+<p><b>Selección del sitio.</b> Se evaluó el prototipo del proyecto (CyberDojo v0.3), levantado con <code>npm start</code>. Criterios: accesibilidad (WCAG 2.1 A/AA), rendimiento, claridad visual y cumplimiento de estándares técnicos.</p>
+<table class="t"><tr><th>Paso</th><th>Herramienta</th><th>Alcance</th></tr>
+<tr><td>1</td><td>Lighthouse (Performance, Accessibility, Best Practices)</td><td>Pantalla de ingreso, emulación móvil</td></tr>
+<tr><td>2</td><td>axe-core inyectado con Playwright</td><td>16 pantallas (P01–P16) × 2 viewports (escritorio 1280×900, móvil 375×812) = 32 escaneos</td></tr>
+<tr><td>3</td><td>Cross-browser / móvil</td><td>Chromium en escritorio y emulación móvil; revisión de desbordes</td></tr></table>
+
+<h2>3. Resultados</h2>
+<h3>3.1 Lighthouse</h3>
+<div class="score"><div><b>97</b>Performance</div><div><b>100</b>Accessibility</div><div><b>100</b>Best Practices</div></div>
+<figure><img src="figuras/01-lighthouse-puntajes.png" style="max-height:330pt"><figcaption>Figura 1. Informe de Lighthouse: puntajes y métricas (FCP 2.0 s, LCP 2.1 s, TBT 0 ms, CLS 0.003, Speed Index 2.0 s).</figcaption></figure>
+<table class="t"><tr><th>Oportunidad detectada</th><th>Ahorro potencial</th></tr>
+<tr><td>Habilitar compresión de texto</td><td>88 KiB</td></tr><tr><td>Reducir JavaScript sin usar</td><td>57 KiB</td></tr>
+<tr><td>Minificar JavaScript</td><td>15 KiB</td></tr><tr><td>Reducir CSS sin usar</td><td>10 KiB</td></tr></table>
+
+<h3>3.2 axe-core (32 escaneos)</h3>
+<p><b>0</b> violaciones de contraste (<code>color-contrast</code>), <b>0</b> críticas o serias, <b>0</b> problemas de ARIA y <b>0</b> scroll horizontal en móvil. Cuatro reglas de severidad moderada:</p>
+<table class="t"><tr><th>Regla</th><th>Qué significa</th><th>Escaneos afectados</th></tr>
+<tr><td><code>heading-order</code></td><td>Los niveles de encabezado saltan (h3 sin h2 previo)</td><td>16 de 32</td></tr>
+<tr><td><code>region</code></td><td>Contenido fuera de landmarks (barra de demo <code>.presenter</code>)</td><td>18 de 32</td></tr>
+<tr><td><code>landmark-one-main</code></td><td>Falta el landmark <code>main</code> (P08)</td><td>2 de 32</td></tr>
+<tr><td><code>page-has-heading-one</code></td><td>Falta el <code>h1</code> (P08)</td><td>2 de 32</td></tr></table>
+
+<h3>3.3 Pantallas evaluadas</h3>
+<div class="pair"><figure><img src="figuras/02-ingreso-escritorio.png"><figcaption>Figura 2. P02 Ingreso (escritorio).</figcaption></figure>
+<figure><img src="figuras/03-dojo-escritorio.png"><figcaption>Figura 3. P05 Dojo (escritorio).</figcaption></figure></div>
+<div class="pair" style="width:75%;margin:0 auto"><figure><img src="figuras/06-bienvenida-movil.png"><figcaption>Figura 4. P01 Bienvenida (móvil 375×812).</figcaption></figure>
+<figure><img src="figuras/07-dojo-movil.png"><figcaption>Figura 5. P05 Dojo (móvil).</figcaption></figure></div>
+<h3>3.4 Cross-browser y móvil</h3>
+<p>En Chromium de escritorio y en emulación móvil no se detectó scroll horizontal ni desbordes, y el diseño se adapta al ancho del teléfono. <b>No se probó</b> en Firefox, Safari ni en un dispositivo físico. Dato relevante: la voz usa Web Speech API, que en Firefox no ofrece reconocimiento de voz; ahí aplica el respaldo por texto y botones que el proyecto ya contempla.</p>
+
+<h2>4. Tres problemas críticos, principio de UX y solución</h2>
+<p>El prototipo no tiene fallas graves. Se priorizan los tres hallazgos con más efecto sobre usuarios reales.</p>
+<h3>Problema 1. La llamada de vishing (P08) no tiene <code>main</code> ni <code>h1</code></h3>
+<div class="pair"><figure><img src="figuras/05-vishing-escritorio.png"><figcaption>Figura 6. P08 en escritorio.</figcaption></figure><figure><img src="figuras/08-vishing-movil.png"><figcaption>Figura 7. P08 en móvil.</figcaption></figure></div>
+<table class="t"><tr><td width="22%"><b>Evidencia</b></td><td>axe: <code>landmark-one-main</code> y <code>page-has-heading-one</code>, en escritorio y móvil.</td></tr>
+<tr><td><b>Principio UX</b></td><td>Visibilidad del estado del sistema y consistencia y estándares (Nielsen). Una persona con lector de pantalla no sabe en qué pantalla está ni puede saltar al contenido principal, justo en la pantalla más inmersiva del entrenamiento.</td></tr>
+<tr><td><b>Solución</b></td><td>Envolver la vista en <code>&lt;main&gt;</code> y añadir un <code>&lt;h1&gt;</code> («Llamada en curso» o el nombre del atacante simulado), oculto visualmente con la clase <code>sr</code> que ya existe.</td></tr></table>
+
+<h3>Problema 2. Saltos en la jerarquía de encabezados</h3>
+<figure><img src="figuras/04-p03-heading-order-escritorio.png" style="max-height:300pt"><figcaption>Figura 8. P03: axe resalta (rojo) el encabezado «¿En qué área trabajas?», un <code>h3</code> sin <code>h2</code> previo.</figcaption></figure>
+<table class="t"><tr><td width="22%"><b>Evidencia</b></td><td>axe: <code>heading-order</code> en 16 de 32 escaneos (P03, P05, P07 y otras).</td></tr>
+<tr><td><b>Principio UX</b></td><td>Consistencia y estándares; reconocimiento antes que recuerdo. Los lectores de pantalla recorren la página por encabezados y reciben una estructura confusa.</td></tr>
+<tr><td><b>Solución</b></td><td>Un <code>h1</code> por vista, <code>h2</code> para secciones y <code>h3</code> solo dentro de ellas. Es un cambio en las plantillas de <code>app/js/app.js</code>; el aspecto visual se conserva ajustando el CSS por clase.</td></tr></table>
+
+<h3>Problema 3. Rendimiento: sin compresión y JavaScript pesado (≈170 KiB evitables)</h3>
+<table class="t"><tr><td width="22%"><b>Evidencia</b></td><td>Lighthouse: FCP 2.0 s y LCP 2.1 s (única penalización del 97); <code>uses-text-compression</code> y <code>unused-javascript</code> con puntaje 0.</td></tr>
+<tr><td><b>Principio UX</b></td><td>Eficiencia de uso y visibilidad del estado. Es una PWA pensada para celular y redes de empresa, donde 2 s para el primer contenido se nota en conexiones débiles.</td></tr>
+<tr><td><b>Solución</b></td><td>Activar gzip/brotli en el servidor (<code>src/server/</code>), minificar <code>app.js</code> y <code>escenarios.js</code>, y cargar con <code>import()</code> las partes no usadas al inicio (voz, torneos, administración).</td></tr></table>
+<p><b>Hallazgo menor.</b> La barra de demo («Ir a», «Reiniciar demo») queda fuera de landmarks (<code>region</code>). Es andamiaje del prototipo: basta ponerla en un <code>&lt;nav aria-label="Demo"&gt;</code> o retirarla en producción.</p>
+
+<h2>5. Plan de mejoras</h2>
+<table class="t"><tr><th>#</th><th>Mejora</th><th>Esfuerzo</th><th>Efecto</th></tr>
+<tr><td>1</td><td><code>main</code> + <code>h1</code> en P08</td><td>Bajo</td><td>Accesibilidad para lectores de pantalla</td></tr>
+<tr><td>2</td><td>Jerarquía h1 → h2 → h3 en todas las vistas</td><td>Bajo</td><td>Navegación por encabezados</td></tr>
+<tr><td>3</td><td>Compresión, minificado y carga diferida de JS</td><td>Medio</td><td>−170 KiB; mejor FCP y LCP</td></tr>
+<tr><td>4</td><td>Barra de demo dentro de un landmark</td><td>Bajo</td><td>Limpia el informe de axe</td></tr>
+<tr><td>5</td><td>Probar en Firefox, Safari y celular real</td><td>Medio</td><td>Cierra el cross-browser pendiente</td></tr></table>
+
+<h2>6. Limitaciones</h2>
+<ul><li>No se ejecutó <b>WAVE</b> (extensión de navegador); axe-core cubre contraste, ARIA y estructura, pero WAVE puede reportar alertas adicionales.</li>
+<li>Lighthouse audita una sola URL (la pantalla de ingreso); el resto de pantallas se cubrió con axe.</li>
+<li>Todo se midió en <code>localhost</code>; el rendimiento real depende del despliegue.</li>
+<li>No se probó en Firefox, Safari ni dispositivo físico.</li></ul>
+</body></html>
